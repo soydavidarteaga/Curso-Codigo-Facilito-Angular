@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="mainModule">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script>
+      angular.module("mainModule", [])
+        .controller("FirstController", function($scope){
+          $scope.nombre = "Uriel";
+          /*setTimeout(function(){
+            $scope.$apply(function(){
+              $scope.nombre = "CodigoFacilito";
+            },2000);*/
+            document.querySelector("#mi_boton").addEventListener("click",function(){
+                $scope.$apply(function(){
+                  $scope.nombre = "CodigoFacilito";
+                });
+            });
+        });
+  </script>
+</head>
+<body ng-controller="FirstController">
+  <h1>{{nombre}}</h1>
+  <button id="mi_boton">Haz Click</button>
+  <button ng-click="nombre = 'CodigoFacilito'">Facil</button>
+</body>
+</html>
