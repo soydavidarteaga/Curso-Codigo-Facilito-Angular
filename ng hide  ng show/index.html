@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="MyFirstApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="controller.js" charset="utf-8"></script>
+  <style>
+    .animated
+    {
+      opacity: 1;
+      max-resolution: auto;
+      overflow: hidden;
+      transition: all 2s;
+    }
+    .animated.ng-hide
+    {
+      opacity: 0;
+      max-resolution: 0px !important;
+      display: block !important;
+    }
+  </style>
+</head>
+<body ng-controller="FirstController">
+  <div ng-show="loading">
+    Cargando...
+  </div>
+  <div ng-show="!loading && posts.length <= 0">No se encontraron resultados</div>
+  <ul ng-show="posts.length > 0" class="animated">
+    <li ng-repeat="post in posts">
+      <h2>{{post.title}}</h2>
+      <p>
+        {{post.body}}
+      </p>
+    </li>
+  </ul>
+</body>
+</html>
