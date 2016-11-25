@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ng event ng class</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <style>
+      .hover{
+        background-color: rgb(200,50,50);
+      }
+      .no-hover{
+        background-color: rgb(50,200,50);
+      }
+  </style>
+</head>
+<body>
+  <button ng-mouseover="bandera = true" ng-mouseout="bandera = false" ng-class="{'hover': bandera,'no-hover': !bandera}">
+      Hover me
+  </button> <span ng-show="bandera">&lt; - click me</span>
+  <button ng-click="bandera2 = !bandera2">
+      click me
+  </button> <span ng-show="bandera2">&lt; - clickeastes</span>
+  <p>
+    {{ bandera2 | json}}
+  </p>
+</body>
+</html>
