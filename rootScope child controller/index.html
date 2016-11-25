@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="MyFirstApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="controller.js" charset="utf-8"></script>
+</head>
+<body ng-controller="FirstController">
+  {{nombre}}
+  <p><strong>Valor de el padre</strong> {{$parent.nombre}}</p>
+  <div ng-controller="ChildController">
+    <p><strong>Valor de el hijo</strong> {{nombre}}</p>
+    <input type="text" ng-model="$parent.nombre">
+  </div>
+</body>
+</html>
