@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="CustomDirective">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+</head>
+<body ng-controller="AppCtrl">
+  <ul class="no-list" ng-cloak>
+    <li ng-repeat="repo in repos">
+      <img ng-src="{{repo.owner.avatar_url}}" alt="">
+      <h1>{{repo.name}}</h1>
+    </li>
+  </ul>
+</body>
+</html>
