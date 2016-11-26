@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="CustomDirective">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Directivas</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="angular-route.min.js"></script>
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="autocomplete-jquery-ui.js"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <script src="directives.js" charset="utf-8"></script>
+  <script src="controllers.js"></script>
+  <style>
+    .circular{
+      border-radius:50%;
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+    }
+    .no-list li{
+      list-style-type:none;
+    }
+    body,html{
+      text-align:center;
+      background-color: #eee;
+      margin:0px;
+    }
+  </style>
+</head>
+<body>
+  <div ng-view></div>
+</body>
+</html>
