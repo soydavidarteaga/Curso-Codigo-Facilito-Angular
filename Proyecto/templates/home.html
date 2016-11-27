@@ -11,7 +11,8 @@
           </strong>
         </div>
         <div class="card__actions">
-          <a href="#">Leer Mas</a>
+          <a href="#/post/{{post.id}}" class="btn btn--m btn--blue btn--flat" lx-ripple>Leer Mas</a>
+          <a ng-click="removePost(post)" class="btn btn--m btn--red btn--flat" lx-ripple>Eliminar</a>
         </div>
       </div>
     </div>
@@ -33,7 +34,7 @@
               </strong>
             </div>
             <dis class="card__actions">
-              <a href="">Ver Mas</a>
+              <a href="#/user/{{user.id}}">Ver Mas</a>
             </dis>
           </div>
         </div>
